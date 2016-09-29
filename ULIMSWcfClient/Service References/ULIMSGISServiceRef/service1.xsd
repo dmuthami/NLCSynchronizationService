@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcf.ulims.com.na" elementFormDefault="qualified" targetNamespace="http://wcf.ulims.com.na" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="startGISSyncProcess">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="shallStart" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="startGISSyncProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startGISSyncProcessResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isSuccessGISSyncProcess">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="isSuccessGISSyncProcessResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="isSuccessGISSyncProcessResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

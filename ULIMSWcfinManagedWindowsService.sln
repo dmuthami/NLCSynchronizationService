@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULIMSWcfinManagedWindowsService", "ULIMSWcfinManagedWindowsService\ULIMSWcfinManagedWindowsService.csproj", "{733BE3D1-B69A-43F3-B90E-AB247E0F7A4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULIMSWcfClient", "ULIMSWcfClient\ULIMSWcfClient.csproj", "{DBF105C8-4CD1-49B4-8FA9-AE92061AB887}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A61FE8F-B616-45C3-8346-8B3532B94652} = {9A61FE8F-B616-45C3-8346-8B3532B94652}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULIMSSerializer", "ULIMSSerializer\ULIMSSerializer.csproj", "{2EF39110-C39B-4A9A-9F53-5F69D1559927}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULIMSGISPython", "ULIMSGISPython\ULIMSGISPython.csproj", "{1CE50939-5390-421A-956C-AAA177453AE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{A31CB773-C545-4049-A676-B3B3A04E731E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ULIMSWcfServiceLibrary", "ULIMSWcfServiceLibrary\ULIMSWcfServiceLibrary.csproj", "{9A61FE8F-B616-45C3-8346-8B3532B94652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigLibrary", "ConfigLibrary\ConfigLibrary.csproj", "{521BA15B-D65E-439E-AF64-2988A20E1AE1}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.10.125:8080/tfs/projectservices
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ConfigLibrary\\ConfigLibrary.csproj
+		SccProjectName1 = ConfigLibrary
+		SccLocalPath1 = ConfigLibrary
+		SccProjectUniqueName2 = ULIMSGISPython\\ULIMSGISPython.csproj
+		SccProjectName2 = ULIMSGISPython
+		SccLocalPath2 = ULIMSGISPython
+		SccProjectUniqueName3 = ULIMSSerializer\\ULIMSSerializer.csproj
+		SccProjectName3 = ULIMSSerializer
+		SccLocalPath3 = ULIMSSerializer
+		SccProjectUniqueName4 = ULIMSWcfClient\\ULIMSWcfClient.csproj
+		SccProjectName4 = ULIMSWcfClient
+		SccLocalPath4 = ULIMSWcfClient
+		SccProjectUniqueName5 = ULIMSWcfinManagedWindowsService\\ULIMSWcfinManagedWindowsService.csproj
+		SccProjectName5 = ULIMSWcfinManagedWindowsService
+		SccLocalPath5 = ULIMSWcfinManagedWindowsService
+		SccProjectUniqueName6 = ULIMSWcfServiceLibrary\\ULIMSWcfServiceLibrary.csproj
+		SccProjectName6 = ULIMSWcfServiceLibrary
+		SccLocalPath6 = ULIMSWcfServiceLibrary
+		SccProjectUniqueName7 = Utility\\Utility.csproj
+		SccProjectName7 = Utility
+		SccLocalPath7 = Utility
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{733BE3D1-B69A-43F3-B90E-AB247E0F7A4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{733BE3D1-B69A-43F3-B90E-AB247E0F7A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{733BE3D1-B69A-43F3-B90E-AB247E0F7A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{733BE3D1-B69A-43F3-B90E-AB247E0F7A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBF105C8-4CD1-49B4-8FA9-AE92061AB887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBF105C8-4CD1-49B4-8FA9-AE92061AB887}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBF105C8-4CD1-49B4-8FA9-AE92061AB887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBF105C8-4CD1-49B4-8FA9-AE92061AB887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EF39110-C39B-4A9A-9F53-5F69D1559927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EF39110-C39B-4A9A-9F53-5F69D1559927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EF39110-C39B-4A9A-9F53-5F69D1559927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EF39110-C39B-4A9A-9F53-5F69D1559927}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CE50939-5390-421A-956C-AAA177453AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CE50939-5390-421A-956C-AAA177453AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CE50939-5390-421A-956C-AAA177453AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CE50939-5390-421A-956C-AAA177453AE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31CB773-C545-4049-A676-B3B3A04E731E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31CB773-C545-4049-A676-B3B3A04E731E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31CB773-C545-4049-A676-B3B3A04E731E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31CB773-C545-4049-A676-B3B3A04E731E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A61FE8F-B616-45C3-8346-8B3532B94652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A61FE8F-B616-45C3-8346-8B3532B94652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A61FE8F-B616-45C3-8346-8B3532B94652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A61FE8F-B616-45C3-8346-8B3532B94652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{521BA15B-D65E-439E-AF64-2988A20E1AE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{521BA15B-D65E-439E-AF64-2988A20E1AE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{521BA15B-D65E-439E-AF64-2988A20E1AE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{521BA15B-D65E-439E-AF64-2988A20E1AE1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

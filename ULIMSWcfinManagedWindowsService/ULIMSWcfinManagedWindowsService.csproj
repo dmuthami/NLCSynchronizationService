@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{733BE3D1-B69A-43F3-B90E-AB247E0F7A4C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ULIMSWcfinManagedWindowsService</RootNamespace>
+    <AssemblyName>ULIMSWcfinManagedWindowsService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="fabric_registry_nairobiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>fabric_registry_nairobiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ULIMSGISWindowsService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabric_registry_nairobiDataSet.xsc">
+      <DependentUpon>fabric_registry_nairobiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="fabric_registry_nairobiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>fabric_registry_nairobiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="fabric_registry_nairobiDataSet.xss">
+      <DependentUpon>fabric_registry_nairobiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="local_authorities\helao_nafidi\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\helao_nafidi\connection_files\gisadmin_helao_nafidi%40helao_nafidi%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\helao_nafidi\connection_files\sde%40helao_nafidi%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\katima_mulilo\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\katima_mulilo\connection_files\gisadmin_katima_mulilo%40katima_mulilo%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\katima_mulilo\connection_files\sde%40katima_mulilo%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\keetmanshoop\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\keetmanshoop\connection_files\gisadmin_keetmanshoop%40keetmanshoop%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\keetmanshoop\connection_files\sde%40keetmanshoop%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\okahandja\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\okahandja\connection_files\gisadmin_okahandja%40okahandja%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\okahandja\connection_files\sde%40okahandja%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\oshakati\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\oshakati\connection_files\gisadmin_oshakati%40oshakati%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\oshakati\connection_files\sde%40oshakati%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\otjiwarongo\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\otjiwarongo\connection_files\gisadmin_otjiwarongo%40otjiwarongo%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\otjiwarongo\connection_files\sde%40otjiwarongo%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\outapi\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\outapi\connection_files\gisadmin_outapi%40outapi%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\outapi\connection_files\sde%40outapi%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\rundu\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\rundu\connection_files\gisadmin_rundu%40rundu%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\rundu\connection_files\sde%40rundu%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\tsumeb\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\tsumeb\connection_files\gisadmin_tsumeb%40tsumeb%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\tsumeb\connection_files\sde%40tsumeb%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\walvis_bay\Config.ini">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\walvis_bay\connection_files\gisadmin_walvis_bay%40walvis_bay%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\walvis_bay\connection_files\sde%40walvis_bay%40localhost.sde">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigLibrary\ConfigLibrary.csproj">
+      <Project>{521ba15b-d65e-439e-af64-2988a20e1ae1}</Project>
+      <Name>ConfigLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ULIMSGISPython\ULIMSGISPython.csproj">
+      <Project>{1ce50939-5390-421a-956c-aaa177453ae2}</Project>
+      <Name>ULIMSGISPython</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ULIMSSerializer\ULIMSSerializer.csproj">
+      <Project>{2ef39110-c39b-4a9a-9f53-5f69d1559927}</Project>
+      <Name>ULIMSSerializer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ULIMSWcfServiceLibrary\ULIMSWcfServiceLibrary.csproj">
+      <Project>{9a61fe8f-b616-45c3-8346-8b3532b94652}</Project>
+      <Name>ULIMSWcfServiceLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{a31cb773-c545-4049-a676-b3b3a04e731e}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="local_authorities\python_code\AutoReconcileAndPost.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\python_code\Compute_Stand_No.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\python_code\Configurations.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="local_authorities\python_code\InvokeComputeStandNo.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ULIMSGISWindowsService.resx">
+      <DependentUpon>ULIMSGISWindowsService.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

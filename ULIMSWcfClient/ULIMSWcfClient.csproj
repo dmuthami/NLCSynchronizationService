@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBF105C8-4CD1-49B4-8FA9-AE92061AB887}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ULIMSWcfClient</RootNamespace>
+    <AssemblyName>ULIMSWcfClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.3\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="ConfigurationWeb\ConfigHelperWeb.cs" />
+    <Compile Include="ConfigurationWeb\ConnectionInfoWeb.cs" />
+    <Compile Include="ConfigurationWeb\LocalAuthority.cs" />
+    <Compile Include="ConfigurationWeb\LocalAuthorityCollection.cs" />
+    <Compile Include="ConfigurationWeb\LocalAuthorityElement.cs" />
+    <Compile Include="ConfigurationWeb\LocalAuthoritySection.cs" />
+    <Compile Include="Configuration\ConfigHelper.cs" />
+    <Compile Include="Configuration\IniConfig\IniFile.cs" />
+    <Compile Include="Configuration\LocalAuthorityTableCollection.cs" />
+    <Compile Include="Configuration\LocalAuthorityTableElement.cs" />
+    <Compile Include="Configuration\LocalAuthorityTableSection.cs" />
+    <Compile Include="Configuration\LocalAuthorityViewCollection.cs" />
+    <Compile Include="Configuration\LocalAuthorityViewElement.cs" />
+    <Compile Include="Configuration\LocalAuthorityViewSection.cs" />
+    <Compile Include="Configuration_Local\LocalAuthorityCollection.cs" />
+    <Compile Include="Configuration_Local\LocalAuthorityElement.cs" />
+    <Compile Include="Configuration_Local\LocalAuthoritySection.cs" />
+    <Compile Include="Data\ConnectionInfo.cs" />
+    <Compile Include="Data\CustomParameter.cs" />
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\DbExecutor.cs" />
+    <Compile Include="Data\DbSettings.cs" />
+    <Compile Include="Data\TypeHelper.cs" />
+    <Compile Include="ExecLogic\gisp_Processor.cs" />
+    <Compile Include="ExecLogic\gis_nav_multiProcessor.cs" />
+    <Compile Include="ExecLogic\spnav_Processor.cs" />
+    <Compile Include="GisProcessing\ErfData.cs" />
+    <Compile Include="GisProcessing\Erfs.cs" />
+    <Compile Include="GisProcessing\ExecuteGIS2SPClient.cs" />
+    <Compile Include="GisProcessing\Extensions.cs" />
+    <Compile Include="GisProcessing\GisReader.cs" />
+    <Compile Include="GisProcessing\gistospExecution.cs" />
+    <Compile Include="GisProcessing\ParcelData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\svcNavApplicationForPurchase\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\svcNavCharges\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\svcNavErfs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\svcNavValuationPeriods\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\svcNavValuation\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\svcSpErf\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ULIMSGISServiceRef\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="SingleApplication.cs" />
+    <Compile Include="SpNavProcessing\CrudState.cs" />
+    <Compile Include="SpNavProcessing\ExecuteSP2NAVClient.cs" />
+    <Compile Include="SpNavProcessing\ObjectState.cs" />
+    <Compile Include="SpNavProcessing\Repository\ICharges.cs" />
+    <Compile Include="SpNavProcessing\Repository\IErf.cs" />
+    <Compile Include="SpNavProcessing\Repository\IErfApplication.cs" />
+    <Compile Include="SpNavProcessing\Repository\ISyncSpToNav.cs" />
+    <Compile Include="SpNavProcessing\Repository\IValuation.cs" />
+    <Compile Include="SpNavProcessing\Repository\IValuationPeriod.cs" />
+    <Compile Include="SpNavProcessing\State.cs" />
+    <Compile Include="SpNavProcessing\SyncApplicationForPurchase.cs" />
+    <Compile Include="SpNavProcessing\SyncCharges.cs" />
+    <Compile Include="SpNavProcessing\SyncErf.cs" />
+    <Compile Include="SpNavProcessing\SyncValuation.cs" />
+    <Compile Include="SpNavProcessing\SyncValuationPeriod.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Service References\svcNavApplicationForPurchase\Application_For_Purchase.wsdl" />
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.Application_For_Purchase.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.CreateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.Create_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.Delete_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.GetRecIdFromKey_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.IsUpdated_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.ReadByRecId_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.ReadMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.Read_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.UpdateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavApplicationForPurchase\ULIMSWcfClient.svcNavApplicationForPurchase.Update_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\Charges.wsdl" />
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.Charges.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.CreateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.Create_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.Delete_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.GetRecIdFromKey_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.IsUpdated_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.ReadByRecId_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.ReadMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.Read_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.UpdateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavCharges\ULIMSWcfClient.svcNavCharges.Update_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\Erfs.wsdl" />
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.CreateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.Create_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.Delete_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.Erfs.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.GetRecIdFromKey_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.IsUpdated_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.ReadByRecId_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.ReadMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.Read_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.UpdateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavErfs\ULIMSWcfClient.svcNavErfs.Update_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.CreateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.Create_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.Delete_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.GetRecIdFromKey_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.IsUpdated_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.ReadByRecId_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.ReadMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.Read_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.UpdateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.Update_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\ULIMSWcfClient.svcNavValuationPeriods.Valuationperiods.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuationPeriods\Valuationperiods.wsdl" />
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.CreateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.Create_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.Delete_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.GetRecIdFromKey_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.IsUpdated_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.ReadByRecId_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.ReadMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.Read_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.UpdateMultiple_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.Update_Result.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\ULIMSWcfClient.svcNavValuation.Valuation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\svcNavValuation\Valuation.wsdl" />
+    <None Include="Service References\svcSpErf\Erf.wsdl" />
+    <None Include="Service References\svcSpErf\Erf.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\svcSpErf\Erf1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\svcSpErf\Erf2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\svcSpErf\Erf3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\svcSpErf\Erf4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\svcSpErf\ULIMSWcfClient.svcSpErf.ErfData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ULIMSGISServiceRef\service.wsdl" />
+    <None Include="Service References\ULIMSGISServiceRef\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ULIMSGISServiceRef\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ULIMSGISServiceRef\ULIMSGISService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigLibrary\ConfigLibrary.csproj">
+      <Project>{521ba15b-d65e-439e-af64-2988a20e1ae1}</Project>
+      <Name>ConfigLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{a31cb773-c545-4049-a676-b3b3a04e731e}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\svcNavApplicationForPurchase\" />
+    <WCFMetadataStorage Include="Service References\svcNavCharges\" />
+    <WCFMetadataStorage Include="Service References\svcNavErfs\" />
+    <WCFMetadataStorage Include="Service References\svcNavValuationPeriods\" />
+    <WCFMetadataStorage Include="Service References\svcNavValuation\" />
+    <WCFMetadataStorage Include="Service References\svcSpErf\" />
+    <WCFMetadataStorage Include="Service References\ULIMSGISServiceRef\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ULIMSGISServiceRef\service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ULIMSGISServiceRef\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ULIMSGISServiceRef\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ULIMSGISServiceRef\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavApplicationForPurchase\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavApplicationForPurchase\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavApplicationForPurchase\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavCharges\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavCharges\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavCharges\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavErfs\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavErfs\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavErfs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavValuation\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavValuation\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavValuation\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavValuationPeriods\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavValuationPeriods\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcNavValuationPeriods\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcSpErf\Erf.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcSpErf\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcSpErf\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\svcSpErf\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

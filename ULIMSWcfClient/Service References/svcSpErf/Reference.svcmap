@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e3b71cc7-7b7f-48fe-9115-9046dbb4ed88" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Erf.disco" MetadataType="Disco" ID="7bfe3e09-c5fe-45ea-9cb0-9d198a8523f3" SourceId="1" SourceUrl="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc?disco" />
+    <MetadataFile FileName="Erf.wsdl" MetadataType="Wsdl" ID="1d399e17-7d03-4e73-bd32-49a8dcbac266" SourceId="1" SourceUrl="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc?wsdl" />
+    <MetadataFile FileName="Erf.xsd" MetadataType="Schema" ID="63a48280-b13c-49eb-af52-bcd0a79c7578" SourceId="1" SourceUrl="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc?xsd=xsd4" />
+    <MetadataFile FileName="Erf1.xsd" MetadataType="Schema" ID="369fe754-e492-4c43-983d-20e8cb348f37" SourceId="1" SourceUrl="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc?xsd=xsd1" />
+    <MetadataFile FileName="Erf2.xsd" MetadataType="Schema" ID="5f96dae5-e04d-4fec-89c4-2712c3c73c95" SourceId="1" SourceUrl="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc?xsd=xsd0" />
+    <MetadataFile FileName="Erf3.xsd" MetadataType="Schema" ID="0614aee1-0799-49a3-8ed6-4c3bf80cbfe2" SourceId="1" SourceUrl="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc?xsd=xsd3" />
+    <MetadataFile FileName="Erf4.xsd" MetadataType="Schema" ID="809072ac-d9ba-4fd9-99fd-71cc4ad8f364" SourceId="1" SourceUrl="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

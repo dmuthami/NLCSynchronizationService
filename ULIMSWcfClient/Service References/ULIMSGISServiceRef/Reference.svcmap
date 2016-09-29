@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="63c3ed38-346a-40f9-a05c-5ae655f3f0e3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://GIS-SRV-067:8888/ulimsgiswcf/service" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="c47dc06a-30cb-4277-91db-7a484b71471a" SourceId="1" SourceUrl="http://gis-srv-067:8888/ulimsgiswcf/service?xsd=xsd1" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="0b63dc56-30c7-448f-8418-f24f30e21c7e" SourceId="1" SourceUrl="http://gis-srv-067:8888/ulimsgiswcf/service?wsdl=wsdl0" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="4690e456-4a80-4d90-be6c-aece74fc79b1" SourceId="1" SourceUrl="http://gis-srv-067:8888/ulimsgiswcf/service?xsd=xsd0" />
+    <MetadataFile FileName="ULIMSGISService.wsdl" MetadataType="Wsdl" ID="1c50e1aa-c9d7-4a51-85e5-5eff0b1ddca6" SourceId="1" SourceUrl="http://gis-srv-067:8888/ulimsgiswcf/service?wsdl" />
+    <MetadataFile FileName="service.disco" MetadataType="Disco" ID="c195b35d-98b3-4b08-8bc6-b563463a2e84" SourceId="1" SourceUrl="http://gis-srv-067:8888/ulimsgiswcf/service?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

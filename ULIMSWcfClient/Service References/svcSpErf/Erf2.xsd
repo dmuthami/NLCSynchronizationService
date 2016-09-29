@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ULIMS.WCF.SP" />
+  <xs:import schemaLocation="http://192.168.10.66:2020/UlimsWcfServer/Erf.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="Ping">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PingResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ULIMS.WCF.SP" minOccurs="0" name="items" nillable="true" type="q1:ArrayOfErfData" />
+        <xs:element minOccurs="0" name="localAuthority" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ULIMS.WCF.SP" minOccurs="0" name="state" type="q2:ObjectState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveRecordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveRecordsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localAuthority" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maximumRows" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ULIMS.WCF.SP" minOccurs="0" name="GetRecordsResult" nillable="true" type="q3:ArrayOfErfData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FlagSynchronizedRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localAuthority" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ids" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FlagSynchronizedRecordsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteErfs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localAuthorityCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteErfsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteErfsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSiteUrl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSiteUrlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSiteUrlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordsByState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localAuthority" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maximumRows" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ULIMS.WCF.SP" minOccurs="0" name="state" type="q5:ObjectState" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordsByStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ULIMS.WCF.SP" minOccurs="0" name="GetRecordsByStateResult" nillable="true" type="q6:ArrayOfErfData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

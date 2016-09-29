@@ -1,0 +1,16 @@
+E:\Programming\Dotnet\ULIMSWcfinManagedWindowsService\ULIMSSerializer\bin\Debug\ULIMSSerializer.dll
+E:\Programming\Dotnet\ULIMSWcfinManagedWindowsService\ULIMSSerializer\bin\Debug\ULIMSSerializer.pdb
+E:\Programming\Dotnet\ULIMSWcfinManagedWindowsService\ULIMSSerializer\obj\Debug\ULIMSSerializer.dll
+E:\Programming\Dotnet\ULIMSWcfinManagedWindowsService\ULIMSSerializer\obj\Debug\ULIMSSerializer.pdb
+E:\Projects\ULIMS\CODE\ULIMSWcfinManagedWindowsService\ULIMSSerializer\bin\Debug\ULIMSSerializer.dll
+E:\Projects\ULIMS\CODE\ULIMSWcfinManagedWindowsService\ULIMSSerializer\bin\Debug\ULIMSSerializer.pdb
+E:\Projects\ULIMS\CODE\ULIMSWcfinManagedWindowsService\ULIMSSerializer\obj\Debug\ULIMSSerializer.dll
+E:\Projects\ULIMS\CODE\ULIMSWcfinManagedWindowsService\ULIMSSerializer\obj\Debug\ULIMSSerializer.pdb
+E:\ArcGIS\ULIMSWcfinManagedWindowsService\ULIMSSerializer\bin\Debug\ULIMSSerializer.dll
+E:\ArcGIS\ULIMSWcfinManagedWindowsService\ULIMSSerializer\bin\Debug\ULIMSSerializer.pdb
+E:\ArcGIS\ULIMSWcfinManagedWindowsService\ULIMSSerializer\obj\Debug\ULIMSSerializer.dll
+E:\ArcGIS\ULIMSWcfinManagedWindowsService\ULIMSSerializer\obj\Debug\ULIMSSerializer.pdb
+D:\ULIMSWcfinManagedWindowsService\ULIMSSerializer\bin\Debug\ULIMSSerializer.dll
+D:\ULIMSWcfinManagedWindowsService\ULIMSSerializer\bin\Debug\ULIMSSerializer.pdb
+D:\ULIMSWcfinManagedWindowsService\ULIMSSerializer\obj\Debug\ULIMSSerializer.dll
+D:\ULIMSWcfinManagedWindowsService\ULIMSSerializer\obj\Debug\ULIMSSerializer.pdb
